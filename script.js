@@ -1,5 +1,6 @@
 const imgs = document.getElementById("images");
 const img = document.querySelectorAll(" img");
+const button = document.querySelector("button")
 
 let idx = 0;
 
@@ -13,4 +14,8 @@ function run() {
     imgs.style.transform = `translateX(${-idx * 500}px)`;
 }
 
-setInterval(run, 2000);
+button.addEventListener("click", () => {
+    setInterval(run, 2000);
+    document.body.style.backgroundColor = "grey"
+})
+
